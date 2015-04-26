@@ -21,6 +21,11 @@ My solution consists of two JavaScript files, a model as essentially the game en
 IE8+ and modern browsers.
 
 
+## Run App
+
+ npm install && bower install && grunt serve
+
+
 ## Author
 
 Web: chrismendes.london
