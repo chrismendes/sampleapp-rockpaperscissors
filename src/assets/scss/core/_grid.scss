@@ -1,0 +1,9 @@
+$susy: (
+  container: 1140px,
+  columns: 12,
+  gutters: 1/4,
+  box-sizing: border-box
+);
+
+$bp-container: max-width 1180px;
+$bp-small: max-width 850px;

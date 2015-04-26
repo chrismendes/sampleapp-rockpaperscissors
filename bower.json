@@ -1,0 +1,11 @@
+{
+  "name": "rock-paper-scissors",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.2"
+  },
+  "devDependencies": {
+    "susy": "~2.2.2",
+    "breakpoint-sass": "~2.5.0"
+  }
+}

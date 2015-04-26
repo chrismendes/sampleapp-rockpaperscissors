@@ -1,0 +1,17 @@
+.app-title .app-title--logo {
+  float: left;
+  display: inline-block;
+  margin: -8px 20px 0 0;
+
+  @include breakpoint(max-width 620px) {
+    margin-bottom: 25px;
+  }
+}
+
+.app-title h1 {
+  margin-bottom: 10px;
+}
+
+.app-title--author {
+  color: #777;
+}

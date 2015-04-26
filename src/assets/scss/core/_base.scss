@@ -1,0 +1,114 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial;
+  background: #efefef;
+}
+
+
+// ---
+// Headings/Paragraph
+// ---
+h1 {
+  font-family: Helvetica Neue, Arial;
+  font-size: 1.6em;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+h2 {
+  font-family: Oswald, Arial;
+  font-size: 1.3em;
+  margin: 15px 0;
+
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.4em;
+}
+
+p + h2 {
+  margin-top: 40px;
+}
+
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+
+
+// ---
+// Lists
+// ---
+ul {
+  margin-bottom: 20px;
+}
+li {
+  list-style: disc;
+  margin-left: 50px;
+  line-height: 1.6em;
+}
+
+
+// ---
+// Inputs
+// ---
+input[type=text] {
+  padding: 8px 15px;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+}
+input[type=text]:focus {
+  outline: none;
+}
+select {
+  height: 34px;
+  padding: 6px 14px;
+  margin-right: 6px;
+  display: inline-block;
+
+  font-size: 0.8em;
+
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+
+  @include breakpoint($bp-small) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+// ---
+// Misc
+// ---
+hr {
+  height: 1px;
+  background: #efefef;
+  border: 0;
+  margin: 20px 0;
+}
+
+
+/* Apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}

@@ -1,0 +1,304 @@
+.rockpaperscissors {
+  width: 100%;
+  position: relative;
+}
+
+// ---
+// Player Object Container
+// ---
+.rockpaperscissors--objectspace {
+  width: 40%;
+  height: 300px;
+  float: left;
+  position: relative;
+
+  border: 1px solid #efefef;
+  background: url('../img/game/wood.jpg') center bottom no-repeat;
+
+  @include breakpoint($bp-small) {
+    width: 50%;
+    height: 200px;
+    background-position: 0 110%;
+  }
+}
+.rockpaperscissors--objectspace--object {
+  width: 100%;
+  
+  display: block;
+  bottom: 11px;
+  position: absolute;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include breakpoint($bp-small) {
+    
+  }
+}
+  .rockpaperscissors--objectspace--object.is-rock {
+    background-image: url('../img/game/rock.png');
+    height: 213px;
+
+    @include breakpoint($bp-small) {
+      background-image: url('../img/game/rock-small.png');
+      height: 141px;
+    }
+  }
+  .rockpaperscissors--objectspace--object.is-paper {
+    background-image: url('../img/game/paper.png');
+    height: 278px;
+
+    @include breakpoint($bp-small) {
+      background-image: url('../img/game/paper-small.png');
+      height: 180px;
+    }
+  }
+  .rockpaperscissors--objectspace--object.is-scissors {
+    background-image: url('../img/game/scissors.png');
+    height: 279px;
+
+    @include breakpoint($bp-small) {
+      background-image: url('../img/game/scissors-small.png');
+      height: 177px;
+    }
+  }
+  .rockpaperscissors--objectspace--object.is-ghost {
+    opacity: 0.3;
+  }
+
+.rockpaperscissors--objectspace--playerlabel {
+  display: block;
+  float: left;
+  padding: 7px;
+  margin-top: -26px;
+  margin-left: -1px;
+
+  border: 1px solid #efefef;
+  border-bottom: 0;
+  background: #efefef;
+
+  color: #999;
+  font-size: 0.7em;
+  text-transform: uppercase;
+
+  @include breakpoint($bp-small) {
+    width: 100%;
+    border: 0;
+    background: none;
+
+    text-align: right;
+  }
+}
+  .rockpaperscissors--objectspace:first-child .rockpaperscissors--objectspace--playerlabel {
+    @include breakpoint($bp-small) {
+      text-align: left;
+    }
+  }
+
+.rockpaperscissors--objectspace--message {
+  color: #DDDDDD;
+  font-size: 6.2em;
+  font-family: Impact;
+
+  @include breakpoint($bp-small) {
+    font-size: 2.7em;
+    line-height: 45px;
+    text-align: center;
+
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
+  .rockpaperscissors--objectspace--message.is-hidden {
+    display: none;
+  }
+  .rockpaperscissors--objectspace--message.is-winner {
+    color: $green;
+  }
+
+
+// ---
+// Middle Column (Vs.)
+// ---
+.rockpaperscissors--separator {
+  width: 20%;
+  height: 300px;
+  float: left;
+  display: table;
+
+  @include breakpoint($bp-small) {
+    width: 100%;
+    height: auto;
+    margin-top: -40px;
+    position: absolute;
+    display: block;
+  }
+}
+.rockpaperscissors--separator > span {
+  color: #efefef;
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+
+  display: table-cell;
+  vertical-align: middle;
+
+  @include breakpoint($bp-small) {
+    font-size: 2em;
+    width: 100%;
+    display: inline-block;
+  }
+}
+  .rockpaperscissors--separator > span.is-promoted {
+    color: #999;
+  }
+
+
+// ---
+// User Object Options
+// ---
+.rockpaperscissors--userchoice {
+  width: 40%;
+  float: left;
+  clear: both;
+  margin-top: 20px;
+
+  @include breakpoint($bp-small) {
+    width: 100%;
+  }
+}
+.rockpaperscissors--userchoice--options {
+  width: 100%;
+  height: 40px;
+}
+  .rockpaperscissors--userchoice--options.is-highlighted {
+    box-shadow: 0 0 10px #ffa500;
+    border-radius: 6px;
+  }
+.rockpaperscissors--userchoice--options > button {
+  width: 33%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  float: left;
+  display: inline-block;
+  overflow: hidden;
+
+  color: #999;
+  font-size: 1em;
+  text-shadow: 0 1px 1px #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  border: 1px solid #d4d4d4;
+  border-left: 0;
+  background: #fbfbfb;
+  background: linear-gradient(to bottom, #fbfbfb, #e1e1e1);
+}
+.rockpaperscissors--userchoice--options > button:first-child {
+  width: 34%;
+  border-left: 1px solid #d4d4d4;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.rockpaperscissors--userchoice--options > button + button + button {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.rockpaperscissors--userchoice--options > button:focus {
+  outline: none;
+}
+.rockpaperscissors--userchoice--options > button:hover {
+  color: #666;
+  background: #ededed;
+  background: linear-gradient(to bottom, #ededed, #e1e1e1);
+}
+.rockpaperscissors--userchoice--options > button.is-selected {
+  color: #666 !important;
+  text-shadow: none !important;
+  background: #c0c0c0 !important;
+  background: linear-gradient(to bottom, #c0c0c0, #d0d0d0) !important;
+}
+.rockpaperscissors--userchoice--options > button.is-selected:hover {
+  cursor: default;
+}
+.rockpaperscissors--userchoice--options > button.is-disabled {
+  color: #c0c0c0;
+  background: #eee;
+  cursor: default;
+}
+
+.rockpaperscissors--userchoice--ctabutton {
+  float: right;
+  height: 40px;
+  padding: 8px 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-right: 0;
+}
+  .rockpaperscissors--userchoice--ctabutton.is-hidden {
+    display: none;
+  }
+
+
+// ---
+// Game Score (Round)
+// ---
+.rockpaperscissors--score {
+  width: 40%;
+  margin-left: 20%;
+  margin-top: 20px;
+  float: left;
+
+  @include breakpoint($bp-small) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.rockpaperscissors--score--label {
+  width: 30%;
+  margin-top: 14px;
+  float: left;
+
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #999;
+}
+.rockpaperscissors--score > ul {
+  margin: 0;
+  padding: 0;
+  width: 65%;
+  float: right;
+
+  border: 1px solid #d4d4d4;
+}
+.rockpaperscissors--score > ul > li {
+  height: 40px;
+  width: 20%;
+  float: left;
+
+  border-left: 1px solid #d4d4d4;
+  background-repeat: no-repeat;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  font-size: 1.6em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+.rockpaperscissors--score > ul > li:first-child {
+  border-left: 0;
+}
+  .rockpaperscissors--score > ul > li.is-player {
+    color: $green;
+  }
+  .rockpaperscissors--score > ul > li.is-computer {
+    color: $red;
+  }
+  .rockpaperscissors--score > ul > li.is-void {
+    color: #999999;
+  }

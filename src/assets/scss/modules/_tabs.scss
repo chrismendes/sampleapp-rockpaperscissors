@@ -1,0 +1,53 @@
+.tabs {
+  width: 100%;
+}
+
+// ---
+// Tab Links
+// ---
+.tabs--links {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  float: left;
+
+  border-bottom: 1px solid #d0d0d0;
+}
+.tabs--links > li {
+  margin: 0;
+  padding: 0;
+  float: left;
+  min-height: 49px;
+
+  list-style: none;
+}
+.tabs--links > li > a {
+  padding: 10px 15px;
+  display: inline-block;
+
+  color: #999;
+  text-decoration: none;
+}
+.tabs--links > li > a:hover {
+  color: #666;
+}
+
+.tabs--links > li.is-active {
+  border: 1px solid #d0d0d0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.tabs--links > li.is-active > a {
+  color: $orange;
+  border-bottom: 2px solid $orange;
+}
+
+
+// ---
+// Tab Panels
+// ---
+.tabs--panel {
+  float: left;
+  width: 100%;
+  padding: 30px 15px 15px 15px;
+}
