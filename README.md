@@ -23,7 +23,9 @@ IE8+ and modern browsers.
 
 ## Run App
 
- npm install && bower install && grunt serve
+```sh
+$ npm install && bower install && grunt serve
+```
 
 
 ## Author
