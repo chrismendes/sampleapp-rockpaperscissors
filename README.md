@@ -1,4 +1,4 @@
-# Sample Application - Rock, Paper, Scissors
+# Sample App - Rock, Paper, Scissors
 
   > Play against the computer or spectate a computer versus computer match.
 
