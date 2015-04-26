@@ -1,6 +1,6 @@
 # Sample Application - Rock, Paper, Scissors
 
-  > Play against the computer, or spectate a computer vs. computer match.
+  > Play against the computer or spectate a computer versus computer match.
 
 ## Overview
 
