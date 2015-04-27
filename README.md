@@ -2,6 +2,8 @@
 
   > Play against the computer or spectate a computer versus computer match.
 
+  > Run the app at: http://rockpaperscissors.chrismendes.london
+
 ## Overview
 
 My solution consists of two JavaScript files, a model as essentially the game engine and a controller that triggers the appropriate functionality while also updating the view. The app is responsive.
@@ -21,7 +23,7 @@ My solution consists of two JavaScript files, a model as essentially the game en
 IE8+ and modern browsers.
 
 
-## Run App
+## Run App Locally
 
 ```sh
 $ npm install
