@@ -116,7 +116,7 @@ module.exports = function (grunt) {
               '*.{html,js}',
               '.htaccess',
               'assets/css/{,*/}*.*',
-              // 'assets/img/*.{png,jpg,gif}',
+              'assets/js/**/*',
               'assets/img/**/*',
               'assets/fonts/{,*/}*.*',
               'data/*.json',
